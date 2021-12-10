@@ -1,3 +1,32 @@
-h1 {
-    color: blue;
+#gridcontainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "page page"
+    "picture nav"
+    "name maincontent";
+}
+
+section.picture {
+    height: 200px;
+    width: 200px;
+    grid-area: picture;
+}
+
+section.maincontent {
+    margin-left: 200px;
+    grid-area: maincontent;
+}
+
+section.page {
+    grid-area: page;
+}
+
+section.nav {
+    grid-area: nav;
+}
+
+section.headertwos {
+    grid-area: name;
 }
