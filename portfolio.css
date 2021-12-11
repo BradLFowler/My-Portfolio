@@ -1,32 +1,94 @@
+body {
+    background-color: rgb(139, 139, 139);
+}
+
+@media (min-width: 900px) {
 #gridcontainer {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr .5fr 2fr 1fr;
+    grid-template-columns: .5fr 1.5fr;
     grid-template-areas: 
-    "page page"
-    "picture nav"
+    "pagetitle pagetitle"
+    "nav nav"
+    "picture maincontent"
     "name maincontent";
 }
 
+img {
+    height: 450px;
+    width: 400px;
+}
+
 section.picture {
-    height: 200px;
-    width: 200px;
     grid-area: picture;
+    margin-left: 100px;
+    background-color: black;
 }
 
 section.maincontent {
-    margin-left: 200px;
     grid-area: maincontent;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgb(25, 54, 56);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 60px;
+    margin-right: 100px;
 }
 
-section.page {
-    grid-area: page;
+.maincontent > h2 {
+    font-size: 40px;
+}
+
+.maincontent > p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+section.pagetitle {
+    grid-area: pagetitle;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 37%;
+    margin-right: 37%;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(25, 54, 56);
 }
 
 section.nav {
     grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+button {
+    height: 60px;
+    width: 150px;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    font-size: 18px;
+    border: 3px solid black;
 }
 
 section.headertwos {
     grid-area: name;
+    margin-left: 100px;
+    color: white;
+    background-color: rgb(61, 61, 61);
+    padding-left: 50px;
+    padding-top: 35px;
+}
+
+.name {
+    margin-left: 60px;
+}
+
 }
