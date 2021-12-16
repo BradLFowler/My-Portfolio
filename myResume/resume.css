@@ -6,7 +6,7 @@ body {
 #gridcontainer {
     display: grid;
     grid-template-columns: .5fr 1.5fr;
-    grid-template-rows: .1fr .5fr 4fr 2fr;
+    grid-template-rows: .1fr .4fr 2.5fr 1fr;
     grid-template-areas: 
     "pagetitle pagetitle"
     "nav nav"
@@ -99,7 +99,7 @@ button {
 @media (min-width: 930px) {
 #gridcontainer {
     display: grid;
-    grid-template-rows: .5fr .7fr 3fr .8fr;
+    grid-template-rows: .5fr .5fr 2fr 2fr;
     grid-template-columns: .5fr 1.5fr;
     grid-template-areas: 
     "pagetitle pagetitle"
