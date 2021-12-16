@@ -6,7 +6,7 @@ body {
 #gridcontainer {
     display: grid;
     grid-template-columns: .5fr 1.5fr;
-    grid-template-rows: .5fr .5fr 2fr 1fr;
+    grid-template-rows: .5fr .5fr 5fr 2fr;
     grid-template-areas: 
     "pagetitle pagetitle"
     "nav nav"
@@ -57,9 +57,17 @@ button:hover {
 
 .maincontent {
     grid-area: maincontent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding-left: 15px;
     background-color: rgb(25, 54, 56);
     color: white;
+}
+
+.maincontent > div > a > img {
+    height: 200px;
+    width: 200px;
 }
 
 .headertwos {
@@ -72,6 +80,11 @@ button:hover {
 }
 
 @media (min-width: 765px) {
+.maincontent > div > a > img {
+    height: 200px;
+    width: 300px;
+}
+
 h1 {
     padding: 25px 25px 25px 25px;
 }
@@ -137,7 +150,7 @@ button:hover {
     transform: scale(1.1);
 }
 
-.img {
+.picture > img {
     height: 450px;
     width: 400px;
 }
@@ -151,15 +164,26 @@ section.picture {
 section.maincontent {
     grid-area: maincontent;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    gap: 80px;
     color: white;
     background-color: rgb(25, 54, 56);
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 60px;
     margin-right: 100px;
+}
+
+#thumbnailsetone {
+    display: flex;
+    flex-direction: row;
+}
+
+.maincontent > div > a > img {
+    height: 300px;
+    width: 400px;
 }
 
 .maincontent > h2 {
