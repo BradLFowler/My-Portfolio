@@ -6,7 +6,7 @@ body {
 #gridcontainer {
     display: grid;
     grid-template-columns: .5fr 1.5fr;
-    grid-template-rows: .5fr .5fr .1fr 5.4fr 2fr;
+    grid-template-rows: .5fr .5fr .1fr 5.4fr 3fr;
     grid-template-areas: 
     "pagetitle pagetitle"
     "nav nav"
@@ -91,6 +91,10 @@ button:hover {
 .maincontent > div > a > img {
     height: 200px;
     width: 300px;
+}
+
+.maincontent > div > a > img:hover {
+    transform: scale(1.1);
 }
 
 h1 {
